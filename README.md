@@ -79,3 +79,17 @@ Pandas Read JSON
 * If your JSON code is not in a file, but in a Python Dictionary, you can load it into a DataFrame directly
 
 ---
+
+Pandas - Analyzing DataFrames
+
+Viewing the Data
+* One of the most used method for getting a quick overview of the DataFrame, is the head() method.
+* The head() method returns the headers and a specified number of rows, starting from the top.
+* Note: if the number of rows is not specified, the head() method will return the top 5 rows.
+* There is also a tail() method for viewing the last rows of the DataFrame.
+* The tail() method returns the headers and a specified number of rows, starting from the bottom.
+
+Info About the Data
+* The DataFrames object has a method called info(), that gives you more information about the data set.
+
+---
