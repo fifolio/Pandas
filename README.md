@@ -19,3 +19,27 @@ What Can Pandas Do?
 * Pandas are also able to delete rows that are not relevant, or contains wrong values, like empty or NULL values. This is called cleaning the data.
 
 ---
+
+What is a Series?
+* A Pandas Series is like a column in a table.
+* It is a one-dimensional array holding data of any type.
+
+Labels
+* If nothing else is specified, the values are labeled with their index number. First value has index 0, second value has index 1 etc.
+* This label can be used to access a specified value.
+
+Create Labels
+* With the index argument, you can name your own labels.
+* When you have created labels, you can access an item by referring to the label.
+
+Key/Value Objects as Series
+* You can also use a key/value object, like a dictionary, when creating a Series.
+* Note: The keys of the dictionary become the labels.
+
+* To select only some of the items in the dictionary, use the index argument and specify only the items you want to include in the Series.
+
+DataFrames
+* Data sets in Pandas are usually multi-dimensional tables, called DataFrames.
+* Series is like a column, a DataFrame is the whole table.
+
+---
