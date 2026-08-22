@@ -43,3 +43,18 @@ DataFrames
 * Series is like a column, a DataFrame is the whole table.
 
 ---
+
+Pandas DataFrames
+
+What is a DataFrame?
+
+* A Pandas DataFrame is a 2 dimensional data structure, like a 2 dimensional array, or a table with rows and columns.
+
+Locate Row
+* Pandas use the loc attribute to return one or more specified row(s)
+
+Named Indexes
+* With the index argument, you can name your own indexes.
+
+
+---

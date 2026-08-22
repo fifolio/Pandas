@@ -53,4 +53,34 @@ data = {
 
 myvar = pd.DataFrame(data)
 
-print(myvar)
+# print(myvar)
+
+# Create a simple Pandas DataFrame:
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+
+#load data into a DataFrame object:
+df = pd.DataFrame(data)
+
+# print(df) 
+
+# Return row 0:
+#refer to the row index:
+# print(df.loc[0]) # Note: This example returns a Pandas Series.
+
+# Return row 0 and 1:
+# use a list of indexes:
+# print(df.loc[[0, 1]]) # When using [], the result is a Pandas DataFrame.
+
+# Add a list of names to give each row a name:
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+
+df = pd.DataFrame(data, index = ["day1", "day2", "day3"])
+
+# print(df.loc["day1"])
+
