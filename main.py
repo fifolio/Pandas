@@ -84,3 +84,22 @@ df = pd.DataFrame(data, index = ["day1", "day2", "day3"])
 
 # print(df.loc["day1"])
 
+# Load the CSV into a DataFrame:
+df = pd.read_csv('data.csv')
+
+# print(df.to_string()) # Tip: use to_string() to print the entire DataFrame.
+
+# Print the DataFrame without the to_string() method:
+df = pd.read_csv('data.csv')
+
+# print(df) 
+
+# Check the number of maximum returned rows:
+# print(pd.options.display.max_rows) 
+
+# Increase the maximum number of rows to display the entire DataFrame:
+pd.options.display.max_rows = 9999
+
+df = pd.read_csv('data.csv')
+
+print(df) 
