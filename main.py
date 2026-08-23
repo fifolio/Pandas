@@ -197,7 +197,10 @@ for x in df.index:
         df.drop(x, inplace=True)
 
 # Returns True for every row that is a duplicate, otherwise False:
-print(df.duplicated())
+# print(df.duplicated())
 
 # Remove all duplicates:
 df.drop_duplicates(inplace = True)
+
+# Show the relationship between the columns:
+print(df.corr())
