@@ -171,3 +171,15 @@ Removing Rows
 * Another way of handling wrong data is to remove the rows that contains wrong data.
 * This way you do not have to find out what to replace them with, and there is a good chance you do not need them to do your analyses.
 
+---
+
+Removing Duplicates
+
+Discovering Duplicates
+* Duplicate rows are rows that have been registered more than one time.
+* To discover duplicates, we can use the duplicated() method.
+* The duplicated() method returns a Boolean values for each row.
+
+Removing Duplicates
+* To remove duplicates, use the drop_duplicates() method.
+
