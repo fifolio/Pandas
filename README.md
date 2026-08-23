@@ -135,3 +135,21 @@ Replace Using Mean, Median, or Mode
 * Median = the value in the middle, after you have sorted all values ascending.
 * Mode = the value that appears most frequently.
 
+---
+
+Data of Wrong Format
+* Cells with data of wrong format can make it difficult, or even impossible, to analyze data.
+* To fix it, you have two options: remove the rows, or convert all cells in the columns into the same format.
+
+
+Convert Into a Correct Format
+* Pandas has a to_datetime() method for this.
+* The format='mixed' option tells pandas: "Hey, I know the dates in this column aren't consistently formatted — please look at each value individually and figure out the format on a row-by-row basis."
+* Normally, pd.to_datetime() expects all the dates in a column to follow the same format. If they don't, it can throw an error or misinterpret some dates. The format='mixed' option tells pandas: "Hey, I know the dates in this column aren't consistently formatted — please look at each value individually and figure out the format on a row-by-row basis." So instead of applying one strict format to the whole column, pandas inspects each entry separately and does its best to parse it correctly.
+One thing to watch out for: because it's guessing per-row, it can occasionally misinterpret ambiguous dates (e.g., is 01/02/2023 January 2nd or February 1st?). If you know your dates are all in one consistent format, it's actually faster and safer to specify that exact format instead, like: df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d').
+* format='mixed' is really meant as a fallback for messy, inconsistent data — which is common when you're combining data from multiple sources.
+
+Removing Rows
+* The result from the converting in the example above gave us a NaT value, which can be handled as a NULL value, and we can remove the row by using the dropna() method.
+
+---

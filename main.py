@@ -211,3 +211,13 @@ x = df["Calories"].mode()[0]
 
 df.fillna({"Calories": x}, inplace=True)
 
+# Convert to date:
+df = pd.read_csv('data.csv')
+
+df['Date'] = pd.to_datetime(df['Date'], format='mixed')
+
+print(df.to_string())
+
+# Remove rows with a NULL value in the "Date" column:
+df.dropna(subset=['Date'], inplace = True)
+
