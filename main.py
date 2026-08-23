@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 mydataset = {"cars": ["BMW", "Volvo", "Ford"], "passings": [3, 7, 2]}
 
@@ -203,4 +204,33 @@ for x in df.index:
 df.drop_duplicates(inplace = True)
 
 # Show the relationship between the columns:
-print(df.corr())
+# print(df.corr())
+
+# Import pyplot from Matplotlib and visualize our DataFrame:
+df = pd.read_csv('data.csv')
+
+df.plot()
+
+# plt.savefig("plot")
+
+# In the example below we will use "Duration" for the x-axis and "Calories" for the y-axis. Include the x and y arguments like this: x = 'Duration', y = 'Calories'
+
+df = pd.read_csv('data.csv')
+
+df.plot(kind = 'scatter', x = 'Duration', y = 'Calories')
+
+# plt.savefig("scatter")
+
+# A scatterplot where there are no relationship between the columns:
+df = pd.read_csv('data.csv')
+
+df.plot(kind = 'scatter', x = 'Duration', y = 'Maxpulse')
+
+# plt.savefig("scatterplot")
+
+# In the example below we will use the "Duration" column to create the histogram:
+df = pd.read_csv('data.csv')
+
+df.plot(kind = 'hist', y = 'Duration')
+
+plt.savefig("hist")
