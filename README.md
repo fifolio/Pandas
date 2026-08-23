@@ -93,3 +93,45 @@ Info About the Data
 * The DataFrames object has a method called info(), that gives you more information about the data set.
 
 ---
+
+Data Cleaning
+Data cleaning means fixing bad data in your data set.
+
+Bad data could be:
+
+* Empty cells
+* Data in wrong format
+* Wrong data
+* Duplicates
+* In this tutorial you will learn how to deal with all of them.
+
+---
+
+Empty Cells
+* Empty cells can potentially give you a wrong result when you analyze data.
+
+Remove Rows
+* One way to deal with empty cells is to remove rows that contain empty cells.
+This is usually OK, since data sets can be very big, and removing a few rows will not have a big impact on the result.
+* Note: By default, the dropna() method returns a new DataFrame, and will not change the original.
+* dropna(inplace = True) will NOT return a new DataFrame, but it will remove all rows containing NULL values from the original DataFrame.
+* inplace = True: The argument to make sure that the changes are done for the original DataFrame instead of returning a new one.
+
+
+
+Replace Empty Values
+* Another way of dealing with empty cells is to insert a new value instead.
+* This way you do not have to delete entire rows just because of some empty cells.
+* The fillna() method allows us to replace empty cells with a value:
+
+Replace Only For Specified Columns
+* The example above replaces all empty cells in the whole Data Frame.
+* To only replace empty values for one column, specify the column name for the DataFrame:
+
+Replace Using Mean, Median, or Mode
+* A common way to replace empty cells, is to calculate the mean, median or mode value of the column.
+* Pandas uses the mean() median() and mode() methods to calculate the respective values for a specified column.
+* Mean = the average value (the sum of all values divided by number of values).
+* Median = the value in the middle, after you have sorted all values ascending.
+* Mode = the value that appears most frequently.
+
